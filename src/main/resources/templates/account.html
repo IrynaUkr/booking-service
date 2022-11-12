@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Account</title>
+</head>
+<body>
+<h4>account with id</h4>
+<p th:text ="${account.getId()}"/>
+<h4> current balance is  </h4>
+<p th:text ="${account.getBalance()}"/>
+<h4> user is  </h4>
+<p th:text ="${account.getUser().getName()}"/>
+<p th:text ="${account.getUser().getEmail()}"/>
+
+</body>
+</html>

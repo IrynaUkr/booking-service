@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Booking service</title>
+</head>
+
+<body>
+
+<h2>Your request was succeeded : ticket created</h2>
+<h5> ticket id:</h5>
+<span th:text="${ticket.id}"></span>
+<h5> place</h5>
+<span th:text="${ticket.place}">  </span>
+<h5> user Name :</h5>
+<span th:text="${ticket.getUser().getName()}"/>
+<h5> user email :</h5>
+<span th:text="${ticket.getUser().getEmail()}"/>
+<h5> user Id :</h5>
+<span th:text="${ticket.getUser().getId()}"/>
+<h5> event title: </h5>
+<span th:text="${ticket.getEvent().getTitle()}"/>
+<h5> event date :</h5>
+<span th:text="${ticket.getEvent().getDate()}"/>
+
+
+</body>
+</html>

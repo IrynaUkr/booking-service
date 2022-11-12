@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>new Event</title>
+</head>
+<body>
+<form method="POST" th:action="@{/eventCreate}" th:object="${event}">
+
+    <label for="event id">Enter id: </label>
+    <input type="text" th:field="*{id}" id="event id"/>
+    <br/>
+
+    <label for="title">Enter title: </label>
+    <input type="text" th:field="*{title}" id="title"/>
+    <br/>
+
+    <label for="date">Enter date: </label>
+    <input type="date" th:field="*{date}" id="date"/>
+    <br/>
+
+    <input type="submit" value="Create"/>
+
+
+</form>
+
+</body>
+</html>

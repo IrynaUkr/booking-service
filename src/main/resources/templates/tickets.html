@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> ticket ID</th>
+        <th> place </th>
+        <th> event Id </th>
+        <th> event Title </th>
+        <th> event Date </th>
+        <th> user Id</th>
+        <th> user Name</th>
+        <th> user email</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="ticket : ${tickets}">
+
+        <td><span th:text="${ticket.id}"/></td>
+        <td><span th:text="${ticket.place}"/></td>
+        <td><span th:text="${ticket.getEvent().getId()}"/></td>
+        <td><span th:text="${ticket.getEvent().getTitle()}"/></td>
+        <td><span th:text="${ticket.getEvent().getDate()}"/></td>
+        <td><span th:text="${ticket.getUser().getId()}"/></td>
+        <td><span th:text="${ticket.getUser().getName()}"/></td>
+        <td><span th:text="${ticket.getUser().getEmail()}"/></td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
